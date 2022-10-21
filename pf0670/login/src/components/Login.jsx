@@ -39,7 +39,7 @@ export default function Login() {
     <div>
       <h2>LOGIN DE USUÁRIOS</h2>
       <div>
-        <form onSubmit="">
+        <form onSubmit={logar}>
           <fieldset>
             <legend>LOGIN</legend>
             <div>

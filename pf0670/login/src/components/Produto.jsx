@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
+import { useEffect } from "react";
+
+const usuario = sessionStorage.getItem("usuario-validado");
 
 export default function Produto() {
+  useEffect(() => {
+    if (usuario == null) {
+      window.location = "/";
+    }
+  }, []);
 
-    const c = JSON.parse(sessionStorage.getItem("carroObj"))
-   
   return (
     <div>
-        <h1>Produto</h1>
-        <p>{c.modelo}</p>
-        <p>{c.cor}</p>
-        <p>{c.placa}</p>
-
+      <h1>Produto</h1>
     </div>
-  )
+  );
 }
