@@ -26,6 +26,13 @@ export default function Login() {
     );
 
     const data = await response.json();
+
+    if (data) {
+      sessionStorage.setItem("usuario-validado", data.login);
+      window.location = "/home";
+    } else {
+      window.location = "/";
+    }
   };
 
   return (
