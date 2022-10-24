@@ -1,6 +1,15 @@
 import React from 'react'
+import { useEffect } from "react";
 
 export default function Produto() {
+
+  const usuario = sessionStorage.getItem("usuario-validado")
+
+  useEffect(() => {
+    if (usuario == null) {
+      window.location = "/";
+    }
+  }, []);
 
     const carro = JSON.parse(sessionStorage.getItem("carroObj"))
 
