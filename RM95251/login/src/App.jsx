@@ -1,29 +1,25 @@
-import React from 'react';
-import Home from './components/Home'
-import Produto from './components/Produto';
+import React from "react";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
+import Produto from "./components/Produto";
+import MainRoutes from "./routes/MainRoutes";
 
 export default function App() {
-
-    //sessionStorage.setItem("CHAVE" , "VALOR")
-    
-    const carro = {
-        "modelo" :  "Corsa",
-        "cor" : "Grafite",
-        "placa" : "GGG-7432"
-    }
-    
-    sessionStorage.setItem("nome" , "WALLISON")
-    sessionStorage.setItem("carroObj",JSON.stringify(carro))
-
-
-
-
   return (
-  <div>
-    <h1>Controle de Acesso</h1>
-    <Home/>
-    <Produto/>
-  </div>
-
-)
+    <div>
+      <Menu />
+      <h1>CONTROLE DE ACESSO</h1>
+      <MainRoutes />
+    </div>
+  );
 }
+//sessionStorage.setItem("CHAVE","VALOR")
+
+// const carro = {
+//   modelo: "Corsa",
+//   cor: "grafite",
+//   placa: "GGG7432",
+// };
+
+// sessionStorage.setItem("nome", "Alê");
+// sessionStorage.setItem("carroObj", JSON.stringify(carro));
